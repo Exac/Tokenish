@@ -1,5 +1,5 @@
 <?php
-
+	get_header();
 ?>
 <!DOCTYPE html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
@@ -54,5 +54,9 @@
 <div class="main-container">
 	<div class="main wrapper clearfix">
 		<section class="jumbotron">
-			<h1>Blog</h1>
+			<h1>
+				<?php
+					echo get_the_title();
+				?>
+			</h1>
 		</section>

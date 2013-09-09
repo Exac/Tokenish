@@ -1,4 +1,4 @@
-<?php the_header(); ?>
+<?php get_header(); ?>
 
 <article>
 	<?php if(have_posts()) : ?>
