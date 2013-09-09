@@ -23,6 +23,13 @@
 <link rel="stylesheet" href="/cdn/css/ie.css">
 <![endif]-->
 <?php wp_head(); ?>
+
+<?php if ( !is_user_logged_in() ){ ?>
+			<style>
+            #wpadminbar{ display:none; }
+						html{margin-top:0px !important;}
+            </style>
+		<?php } ?>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -47,5 +54,5 @@
 <div class="main-container">
 	<div class="main wrapper clearfix">
 		<section class="jumbotron">
-			<h1><?php wp_title(); ?></h1>
+			<h1>Blog</h1>
 		</section>
