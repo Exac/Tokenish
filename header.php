@@ -15,9 +15,9 @@
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.min.css">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/main.css">
+<link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/less.css">
-<script src="/cdn/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+<script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <!--[if lt IE 9]>
 <script src="/cdn/js/html5shiv.js"></script>
 <link rel="stylesheet" href="/cdn/css/ie.css">
