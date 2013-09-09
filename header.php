@@ -22,6 +22,7 @@
 <script src="/cdn/js/html5shiv.js"></script>
 <link rel="stylesheet" href="/cdn/css/ie.css">
 <![endif]-->
+<?php wp_head(); ?>
 </head>
 <body>
 <!--[if lt IE 8]>
@@ -46,5 +47,5 @@
 <div class="main-container">
 	<div class="main wrapper clearfix">
 		<section class="jumbotron">
-			<h1>Achievements</h1>
+			<h1><?php wp_title(); ?></h1>
 		</section>
