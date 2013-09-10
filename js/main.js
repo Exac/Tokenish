@@ -1,4 +1,17 @@
 /*
+ *Detect placeholder support
+ */
+jQuery.support.placeholder = (function(){
+    var i = document.createElement('input');
+    return 'placeholder' in i;
+})();
+if($.support.placeholder){
+	$("html").addClass("placeholder");
+}else{
+	$("html").addClass("no-placeholder");
+}
+
+/*
  *	remove .less stylesheets for dreamweaver...
  */
 var styleSheets = document.styleSheets;

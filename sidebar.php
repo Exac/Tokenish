@@ -2,20 +2,14 @@
 	<h3>Sponsors</h3>
 	<ul class="sponsors">
 		<li>
-			<!--[if IE]>
-				 <img height="190" src="/cdn/img/COO.gif" alt="Olympic Oval at UofC" />
-			<![endif]-->
-			<![if !IE]>
-				 <img height="190" src="/cdn/img/COO.svg" alt="Olympic Oval at UofC" />
-			<![endif]> 
+			<!--[if lte IE 8]><img height="190" src="/cdn/img/COO.gif" alt="Olympic Oval at UofC" /><![endif]-->
+			<!--[if gt IE 8]><img height="190" src="/cdn/img/COO.svg" alt="Olympic Oval at UofC" /><![endif]-->
+			<!--[if !IE]> --><img height="190" src="/cdn/img/COO.svg" alt="Olympic Oval at UofC" /><!-- <![endif]-->	 
 		</li>
 		<li>
-			<!--[if IE]>
-				 <img height="190" src="/cdn/img/SSC.gif" alt="Speed Skate Canada" />
-			<![endif]-->
-			<![if !IE]>
-				 <img height="190" src="/cdn/img/SSC.svg" alt="Speed Skate Canada" />
-			<![endif]> 
+			<!--[if lte IE 8]><img height="190" src="/cdn/img/SSC.gif" alt="Olympic Oval at UofC" /><![endif]-->
+			<!--[if gt IE 8]><img height="190" src="/cdn/img/SSC.svg" alt="Olympic Oval at UofC" /><![endif]-->
+			<!--[if !IE]> --><img height="190" src="/cdn/img/SSC.svg" alt="Olympic Oval at UofC" /><!-- <![endif]-->	
 		</li>
 	</ul>
 	<h3>Twitter</h3>

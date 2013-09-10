@@ -1,5 +1,5 @@
 <?php get_header() ?>
-	<?php /* wp_head(); */ ?>
+<!--index.php-->
 <article>
 	
 	<?php if(have_posts()) : ?>

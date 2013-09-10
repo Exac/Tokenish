@@ -180,6 +180,16 @@ article,aside{
 	-moz-box-sizing:content-box;
 	font-family:"Gudea", "Helvetica", verdana, sans-serif;
 }
+/* Images */
+.entry-content img,
+.comment-content img,
+.widget img {
+	max-width: 97.5%; /* Fluid images for posts, comments, and widgets */
+}
+img[class*="align"],
+img[class*="wp-image-"] {
+	height: auto; /* Make sure images with WordPress-added height and width attributes are scaled correctly */
+}
 article img.portrait{
 	float:left;
 	max-width:50%;
@@ -230,11 +240,92 @@ footer.wrapper:after{
 	height:1px;
 	display:block;
 }
+#respond{
+	background:url("/cdn/img/plus.png");
+}
+.placeholder #respond .commenterdetails{
+	width:100%;
+	text-align: justify;
+	-ms-text-justify: distribute-all-lines;
+	text-justify: distribute-all-lines;
+}
+.placeholder #respond .commenterdetails input{
+	width:24%;
+	position:relative;
+	vertical-align: top;
+	display: inline-block;
+	*display: inline;
+	zoom: 1;
+}
+.placeholder #respond .stretch {
+	width: 100%;
+	display: inline-block;
+	font-size: 0;
+	line-height: 0;
+}
+#respond input,
+#respond textarea{
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
+}
+#respond form input{
+	display:block;
+	width:32% !important;
+	margin:2px 0px;
+}
+.no-placeholder #respond form input{
+	
+}
+#respond input[type=submit]{
+	width:auto !important;
+}
+#respond form textarea{
+	display:block;
+	width:100%;
+}
+.placeholder #respond form label{
+	display:none;
+}
 
+input[type=button],
+input[type=submit],
+input[type=reset],
+.button{
+	display:inline-block;
+	min-height:35px;
+	line-height:35px;
+	border-width:0px 0px 3px 0px;
+	border-style:solid;
+	border-color:#c4cecf;
+	font-weight:bold;
+	font-family:"Gudea", "Advent Pro", Arial, sans-serif;
+	font-size:1em;
+	transition: all 2s;
+	-webkit-transition: all 2s; /* Safari */
+	background: #ffffff; /* Old browsers */
+	background: -moz-linear-gradient(top, #ffffff 0%, #ecefef 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#ecefef)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top, #ffffff 0%,#ecefef 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #ffffff 0%,#ecefef 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #ffffff 0%,#ecefef 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #ffffff 0%,#ecefef 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ecefef',GradientType=0 ); /* IE6-9 */
+}
+input[type=button]:hover,
+input[type=submit]:hover,
+input[type=reset]:hover,
+.button:hover{
+	background: #d7dedf; /* Old browsers */
+	background: -moz-linear-gradient(top,  #ffffff 0%, #c4cecf 100%); /* FF3.6+ */
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ffffff), color-stop(100%,#d7dedf)); /* Chrome,Safari4+ */
+	background: -webkit-linear-gradient(top,  #ffffff 0%,#d7dedf 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top,  #ffffff 0%,#d7dedf 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top,  #ffffff 0%,#d7dedf 100%); /* IE10+ */
+	background: linear-gradient(to bottom,  #ffffff 0%,#d7dedf 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#d7dedf',GradientType=0 ); /* IE6-9 */
 
-
-
-
+}
 
 
 /* ==========================================================================
@@ -277,6 +368,10 @@ footer.wrapper:after{
 		font-size:12px;
 		padding:0;
 		text-align:center;
+	}
+	#respond .commenterdetails input{
+		width:100% !important;
+		display:block !important;
 	}
 }
 @media only screen and (max-width: 480px) {
