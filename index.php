@@ -5,13 +5,13 @@
 	<?php if(have_posts()) : ?>
 	<?php while(have_posts()) : the_post(); ?>
 		<div <?php post_class() ?>>
-			<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
+			<h1><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h1>
 
 			<?php if( has_post_thumbnail() ) : ?>
 				<div class="post-thumb">
 					<a href="<?php the_permalink() ?>"><?php the_post_thumbnail(); ?></a>
 				</div>
-			<?php endif; ?>
+			<?php endif; ?><strong></strong>
 
 			<?php the_content(''); ?>
 			<ul class="meta">
@@ -24,10 +24,20 @@
 	<?php endwhile; ?>
 
 	<div class="pagnation">
-		<ul>
-			<li class="older"><?php next_posts_link('Older') ?></li>
-			<li class="older"><?php previous_posts_link('Newer') ?></li>
-		</ul>
+		<?php
+			$prev_link = get_previous_posts_link(__('&laquo; Older Entries'));
+			$next_link = get_next_posts_link(__('Newer Entries &raquo;'));
+			// as suggested in comments
+			if ($prev_link || $next_link) {
+				echo '<ul class="pagenation">';
+				if ($prev_link){
+					echo '<li>'.previous_posts_link('Newer').'</li>';
+				}
+				if ($next_link){
+					echo '<li>'.next_posts_link('Older').'</li>';
+				}
+			}
+		?>
 	</div>
 
 	<?php else : ?>

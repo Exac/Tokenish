@@ -1,0 +1,28 @@
+.gold{
+	background-color:#FFD700;
+}
+.silver{
+	background:#C0C0C0;
+}
+.bronze{
+	background:#c5824d;
+}
+table{
+	display:block;
+	width:100%;
+}
+table td,
+table th{
+	font-weight:normal;
+	text-align:left;
+	border-collapse:collapse;
+	border-color:rgb(240, 242, 243);
+	height:40px;
+}
+table tr{
+	margin-bottom:2px;
+}
+table td.checked{
+	background-color:rgb(123, 165, 168);
+	border-radius: 50%;
+}

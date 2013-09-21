@@ -17,6 +17,9 @@
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.min.css">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/less.css">
+<?php if ( is_page('help-out') ) { ?>
+<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/help-out.css" type="text/css" media="screen" />
+<?php } ?> 
 <script src="<?php bloginfo('template_url'); ?>/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 <!--[if lt IE 9]>
 <script src="/cdn/js/html5shiv.js"></script>
@@ -41,12 +44,12 @@
 		<nav>
 			<ul>
 				<li class="title"><span>Courtney</span> Shmyr</li>
-				<li><a>Biography</a></li>
-				<li><a>Achievements</a></li>
-				<li><a>Sponsorship</a></li>
-				<li><a>Help&nbsp;Out</a></li>
-				<li><a>Blog</a></li>
-				<li><a>Contact</a></li>
+				<li><a href="/">Biography</a></li>
+				<li><a href="/achievements">Achievements</a></li>
+				<li><a href="/sponsorship">Sponsorship</a></li>
+				<li><a href="/help-out">Help&nbsp;Out</a></li>
+				<li><a href="/blog">Blog</a></li>
+				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</nav>
 	</header>
