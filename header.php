@@ -16,7 +16,7 @@
 <meta name="viewport" content="width=device-width">
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/normalize.min.css">
 <link rel="stylesheet" href="<?php bloginfo('stylesheet_url'); ?>">
-<link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/less.css">
+<link id="genericons-css" media="all" type="text/css" href="<?php bloginfo('template_url'); ?>/font/genericons.css" rel="stylesheet">
 <?php if ( is_page('help-out') ) { ?>
 <link rel="stylesheet" href="<?php bloginfo('template_url'); ?>/css/help-out.css" type="text/css" media="screen" />
 <?php } ?> 
@@ -43,13 +43,23 @@
 	<header class="wrapper clearfix"> 
 		<nav>
 			<ul>
-				<li class="title"><span>Courtney</span> Shmyr</li>
-				<li><a href="/">Biography</a></li>
+				
+				<li class="title"><span><?php $title_arr = explode(' ', trim(get_bloginfo("name"))); echo $title_arr[0];?></span> <?php for($i=1; $i<count($title_arr);$i++){echo $title_arr[$i]." ";} ?></li>
+				<?php wp_nav_menu(array( 'container' => false) ); ?>
+				<?php /*?>wp_nav_menu(array('container' => false, 'walker' => new Custom_Walker_Nav_Menu)); */?>
+				<?php /*wp_nav_menu(array(
+  'theme_location' => 'main',
+  'container' => false,
+  'menu_id' => 'nav',
+  'depth' => 1,
+  'walker' => new Custom_Walker_Nav_Menu
+));*/ ?>
+				<!--<li><a href="/">Biography</a></li>
 				<li><a href="/achievements">Achievements</a></li>
 				<li><a href="/sponsorship">Sponsorship</a></li>
 				<li><a href="/help-out">Help&nbsp;Out</a></li>
 				<li><a href="/blog">Blog</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li><a href="/contact">Contact</a></li>-->
 			</ul>
 		</nav>
 	</header>

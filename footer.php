@@ -1,20 +1,36 @@
 </div>
-	<!-- #main --> 
+<!-- #main -->
 </div>
 <!-- #main-container -->
 
 <div class="footer-container">
 	<footer class="wrapper">
-		<h3>Courtney Shmyr</h3>
-		<p>&copy; Courtney Shmyr <?php echo Date("Y"); ?>.</p>
-		<ul>
-			<li><a>Biography</a></li>
-			<li><a>Achievements</a></li>
-			<li><a>Sponsorship</a></li>
-			<li><a>Help&nbsp;Out</a></li>
-			<li><a>Blog</a></li>
-			<li><a>Contact</a></li>
-		</ul>
+		<div class="social">
+			<h2>Social</h2>
+			<ul>
+				<li><a class="genericon genericon-facebook" href="https://www.facebook.com/courtney.shmyr"></a></li>
+				<li><a class="genericon genericon-twitter" href="https://twitter.com/CShmyr"></a></li>
+			</ul>
+		</div>
+		<div class="navigation">
+			<h2>Navigation</h2>
+			<?php wp_nav_menu( array('container' => '', 'menu' => '', 'menu_class' => 'links') ); ?>
+		</div>
+		<div class="recentposts">
+			<h2>Recent Posts</h2>
+			<ul>
+			<?php
+				$args = array( 'numberposts' => '3' );
+				$recent_posts = wp_get_recent_posts( $args );
+				foreach( $recent_posts as $recent ){
+					echo '<li><a href="' . get_permalink($recent["ID"]) . '" title="Look '.esc_attr($recent["post_title"]).'" >' .   $recent["post_title"].'</a> </li> ';
+				}
+			?>
+			</ul>
+		</div>
+		<div class="copyright">
+			<p>&copy; 2013-<?php echo Date("Y"); ?> Courtney Shmyr. All Rights Reserved. Site designed by <a href="http://thomasmclennan.ca">Thomas Mclennan</a>.</p>
+		</div>
 	</footer>
 </div>
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script> 
@@ -27,6 +43,5 @@
             g.src='//www.google-analytics.com/ga.js';
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
-        <?php wp_footer(); ?>
-</body>
-</html>
+<?php wp_footer(); ?>
+</body></html>
