@@ -2,6 +2,8 @@
 //remove inline image width & height attributes
 add_filter( 'post_thumbnail_html', 'remove_thumbnail_dimensions', 10 );
 
+//Attempt to register a navigation menu
+register_nav_menu( 'primary', 'primary' );
 
 /**
  * Modify menu to add a title LI at the begining. Extends from includes/nav-menu-template.php

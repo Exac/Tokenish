@@ -10,7 +10,7 @@
 <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><![endif]-->
 <title><?php bloginfo('name'); ?> <?php wp_title(); ?></title>
 <meta name="description" content="">
 <meta name="viewport" content="width=device-width">
@@ -45,15 +45,7 @@
 			<ul>
 				
 				<li class="title"><span><?php $title_arr = explode(' ', trim(get_bloginfo("name"))); echo $title_arr[0];?></span> <?php for($i=1; $i<count($title_arr);$i++){echo $title_arr[$i]." ";} ?></li>
-				<?php wp_nav_menu(array( 'container' => false) ); ?>
-				<?php /*?>wp_nav_menu(array('container' => false, 'walker' => new Custom_Walker_Nav_Menu)); */?>
-				<?php /*wp_nav_menu(array(
-  'theme_location' => 'main',
-  'container' => false,
-  'menu_id' => 'nav',
-  'depth' => 1,
-  'walker' => new Custom_Walker_Nav_Menu
-));*/ ?>
+				<?php wp_nav_menu(array( 'container' => false ) ); ?>
 				<!--<li><a href="/">Biography</a></li>
 				<li><a href="/achievements">Achievements</a></li>
 				<li><a href="/sponsorship">Sponsorship</a></li>
